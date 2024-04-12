@@ -1,7 +1,24 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/color-mode', 'nuxt-vuefire'],
+  modules: ['@nuxtjs/color-mode', 'nuxt-vuefire', '@nuxtjs/tailwindcss', 'shadcn-nuxt', "nuxt-icon"], 
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui',
+  },
+  css: ["~/assets/css/tailwind.css"],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   vuefire: {
     auth: {
       enabled: true,
@@ -18,5 +35,12 @@ export default defineNuxtConfig({
     },
     optionsApiPlugin: 'firestore',
   },
-
+  telemetry: false,
+  ssr: false,
+  runtimeConfig: {
+    public: {
+      contactFormSecret: process.env.CONTACTFORM_SECRET
+    }
+  }
+  
 })

@@ -1,11 +1,13 @@
-<script lang="ts" setup>
-
+<script setup>
+definePageMeta({
+  layout: "landing",
+});
 </script>
 
 <template>
-  <div>
-    <h1>Index Page/ Welcome/ Product ad</h1>
-  </div>
+  <LandingContainer>
+    <LandingHero></LandingHero>
+    <LandingFeatures></LandingFeatures>
+    <LandingCta></LandingCta>
+  </LandingContainer>
 </template>
-
-<style lang="scss"></style>
