@@ -8,14 +8,14 @@ definePageMeta({
   <LandingContainer>
     <LandingHero id="hero"/>
     <LandingFeatures/>
-    <LandingCta/>
-  </LandingContainer>
-
-  <LandingContainer>
-    <About id="about"/>
   </LandingContainer>
 
   <LandingContainer>
     <Pricing id="pricing"/>
+  </LandingContainer>
+
+  <LandingContainer>
+    <About id="about"/>
+    <LandingCta/>
   </LandingContainer>
 </template>

@@ -1,39 +1,34 @@
 <template>
-  <main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-8">
-    <div class="p-24 md:order-1 hidden md:block">
+  <main class="flex flex-col md:flex-row-reverse items-center justify-between pt-8 pb-8 md:pt-16">
+    <div class="w-full md:w-2/5 flex justify-center md:justify-start">
       <img
-        class="rounded-full transition-transform transform hover:scale-125"
+        class="rounded-full transition-transform duration-700 hover:scale-110"
         src="~/assets/img/hero.png"
         alt="Starship starts the engine"
         loading="eager"
         format="avif"
-        width="512"
-        height="512"
       />
     </div>
-
-    <div>
-      <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight">
+    <div class="text-center md:text-left w-full md:w-3/5 flex flex-col justify-center">
+      <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight animate-unique">
         REPORTR
       </h1>
-      <p class="text-lg mt-4 text-slate-600 max-w-xl">
-       ReportR, the easiest way to create and share reports with your team and clients in minutes. Mazna is the easiest way to create and share reports with your team and clients in minutes.
+      <p class="text-lg mt-4 text-slate-600 max-w-xl animate-fadeSlideUp">
+        ReportR, the easiest way to create and share reports with your team and clients in minutes.
       </p>
-      <div class="mt-2 flex flex-col sm:flex-row gap-3">
+      <div class="mt-2 flex flex-col sm:flex-row gap-3 justify-center md:justify-start animate-fadeSlideUp">
         <LandingLink
+          class="button-animate"
           href="https://github.com/kaloyanes"
           target="_blank"
           rel="noopener"
-          >Get Started</LandingLink
-        >
+          >Get Started</LandingLink>
         <LandingLink
-          size="lg"
-          styleName="outline"
-          rel="noopener"
+          class="button-animate outline"
           href="https://github.com/valery-a"
           target="_blank"
-          >View Repo</LandingLink
-        >
+          rel="noopener"
+          >View Repo</LandingLink>
       </div>
     </div>
   </main>

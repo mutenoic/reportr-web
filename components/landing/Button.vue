@@ -35,3 +35,31 @@ const styles = {
     <slot />
   </button>
 </template>
+
+<script setup lang="ts">
+interface Props {
+  size?: "md" | "lg";
+  block?: boolean;
+  styleName?: "outline" | "primary" | "inverted";
+  className?: string;
+  [x: string]: any;
+}
+
+withDefaults(defineProps<Props>(), {
+  size: "md",
+  styleName: "primary",
+});
+
+const sizes = {
+  md: "px-5 py-2.5",
+  lg: "px-6 py-3",
+};
+
+// Updated styles with detailed hover effects
+const styles = {
+  outline: "border-2 border-gray-300 hover:border-gray-500 hover:scale-105 text-black hover:bg-black hover:text-white transition-transform duration-300 ease-out",
+  primary: "bg-black text-white hover:bg-slate-900 border-2 border-transparent hover:border-gray-500 hover:scale-105 transition-transform duration-300 ease-out",
+};
+
+</script>
+
