@@ -1,9 +1,4 @@
 <script setup>
-
-definePageMeta({
-  layout: 'landing',
-})
-
 const TeamImg1 = "https://cdn.discordapp.com/attachments/1103536796119347300/1228453680458502175/body3.png?ex=662c19a4&is=6619a4a4&hm=2e495cd93b616697067e47760374fa463086fe3b5ba648b547b9d99eb72569ea&";
 const TeamImg2 = "https://cdn.discordapp.com/attachments/1103536796119347300/1228453681171796061/body1.png?ex=662c19a5&is=6619a4a5&hm=37a9220de13fb29ed4e577bae92ea74281201836683db8fc3273b916b271745b&";
 
@@ -19,10 +14,11 @@ const team = [
     image: TeamImg2,
   },
 ];
+
 </script>
 
 <template>
-  <LandingContainer>
+<LandingContainer>
     <div class="text-center mt-10">
       <h2 class="font-semibold text-4xl text-gray-900">Meet Our Team</h2>
       <p class="mt-3 text-lg text-gray-500">
@@ -43,4 +39,3 @@ const team = [
     </div>
   </LandingContainer>
 </template>
-

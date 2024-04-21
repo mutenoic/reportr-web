@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxtjs/color-mode": "^3.3.3",
+    "@vueuse/core": "^10.9.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-vue-next": "^0.367.0",
@@ -24,8 +25,9 @@
     "vuefire": "^3.1.23"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@nuxtjs/tailwindcss": "^6.12.0",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/bun": "latest",
     "autoprefixer": "^10.4.16",
     "nuxt": "^3.9.0",
     "nuxt-icon": "^0.6.8",
@@ -34,8 +36,7 @@
     "tailwindcss": "^3.4.0",
     "typescript": "^5.4.5",
     "vue": "^3.4.3",
-    "vue-router": "^4.2.5",
-    "@types/bun": "latest"
+    "vue-router": "^4.2.5"
   },
   "module": "index.ts"
 }
