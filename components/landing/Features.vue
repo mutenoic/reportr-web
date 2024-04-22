@@ -66,56 +66,69 @@ const features = [
 
 <style scoped>
 body {
-    background-color: #121212; /* Dark background for the whole page */
-    color: #ffffff; /* Light text for better readability on dark background */
+  background-color: #121212;
+  /* Dark background for the whole page */
+  color: #ffffff;
+  /* Light text for better readability on dark background */
 }
 
-.text-slate-600, .text-lg {
-    color: #cccccc; /* Lighter text color for improved visibility on dark backgrounds */
+.text-slate-600,
+.text-lg {
+  color: #cccccc;
+  /* Lighter text color for improved visibility on dark backgrounds */
 }
 
 .text-slate-500 {
-    color: #bbbbbb;
+  color: #bbbbbb;
 }
 
 @keyframes fadeSlideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(10%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .icon {
-    animation: pulse 2s infinite ease-in-out; /* Apply the pulse animation to icons */
+  animation: pulse 2s infinite ease-in-out;
+  /* Apply the pulse animation to icons */
 }
 
-h3, p {
-    animation: fadeIn 1.5s ease-out; /* Fade-in effect for headings and paragraphs */
+h3,
+p {
+  animation: fadeIn 1.5s ease-out;
+  /* Fade-in effect for headings and paragraphs */
 }
 
 .flex {
-    animation: fadeSlideUp 1s ease-out, fadeIn 2s ease-out; /* Multiple animations for container */
+  animation: fadeSlideUp 1s ease-out, fadeIn 2s ease-out;
+  /* Multiple animations for container */
 }
 </style>

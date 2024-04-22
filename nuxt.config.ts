@@ -52,7 +52,6 @@ export default defineNuxtConfig({
     optionsApiPlugin: 'firestore',
   },
   telemetry: false,
-  ssr: false,
   runtimeConfig: {
     public: {
       contactFormSecret: process.env.CONTACTFORM_SECRET
