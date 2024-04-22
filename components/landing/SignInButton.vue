@@ -1,5 +1,22 @@
 <script lang="ts" setup>
+import { signInWithEmailAndPassword } from '@firebase/auth';
+
 const open = ref(false);
+
+const email = ref("");
+const password = ref("");
+
+async function login() {
+  let auth = useFirebaseAuth();
+  await auth?.authStateReady();
+
+  if (auth === null) {
+    return;
+  }
+
+  await signInWithEmailAndPassword(auth, email.value, password.value);
+  return await navigateTo('/dashboard/reports');
+}
 </script>
 
 <template>
