@@ -1,7 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
+  experimental: {
+    viewTransition: true,
+  },
+  app: {
+    pageTransition: {
+      name: 'page', mode: 'out-in', type: 'transition',
+    },
+  },
   modules: ['@nuxtjs/color-mode', 'nuxt-vuefire'],
+  ssr: false,
   vuefire: {
     auth: {
       enabled: true,
