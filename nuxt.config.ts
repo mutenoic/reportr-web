@@ -14,7 +14,7 @@ export default defineNuxtConfig({
       name: 'page', mode: 'out-in', type: 'transition',
     },
   },
-  modules: ['@nuxtjs/color-mode', 'nuxt-vuefire', '@nuxtjs/tailwindcss', 'shadcn-nuxt', "nuxt-icon"],
+  modules: ['@nuxtjs/color-mode', 'nuxt-vuefire', '@nuxtjs/tailwindcss', 'shadcn-nuxt', "nuxt-icon", "@vueuse/motion/nuxt"],
 
   ssr: false,
   shadcn: {

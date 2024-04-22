@@ -29,7 +29,7 @@ function scrollToHero() {
       </a>
       <div class="flex justify-between items-center w-full lg:w-auto">
         <div class="flex items-center space-x-4">
-          <nav :class="{ 'flex': open, 'hidden': !open, 'lg:flex': true }" class="flex-grow">
+          <nav class="flex-grow">
             <ul class="flex flex-col lg:flex-row gap-4 lg:gap-8 text-center">
               <li v-for="item in menuItems" :key="item.title">
                 <a :href="item.path" class="px-2 py-1 text-gray-800 hover:text-blue-600 font-semibold">

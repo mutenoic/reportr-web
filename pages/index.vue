@@ -6,16 +6,16 @@ definePageMeta({
 
 <template>
   <LandingContainer>
-    <LandingHero id="hero"/>
-    <LandingFeatures/>
+    <LandingHero id="hero" />
+    <LandingFeatures />
   </LandingContainer>
 
   <LandingContainer>
-    <Pricing id="pricing"/>
+    <Pricing id="pricing" />
   </LandingContainer>
 
   <LandingContainer>
-    <About id="about"/>
-    <LandingCta/>
+    <About id="about" />
+    <LandingCta />
   </LandingContainer>
 </template>

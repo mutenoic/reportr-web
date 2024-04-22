@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const features = [
   {
     title: "Modular Design",
@@ -37,10 +37,37 @@ const features = [
     icon: "bx:bxs-group",
   },
 ];
+
+const delayedNumber = ref(0);
+
+onMounted(() => {
+  const children = document.querySelector('.features-title')?.children;
+
+  if (children === undefined) return;
+
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i];
+    useMotion(child, {
+      initial: {
+        opacity: 0,
+        y: 100
+      },
+      enter: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          delay: (i + 1) * 100,
+        }
+      }
+    })
+
+    delayedNumber.value = (i + 1) * 100
+  }
+})
 </script>
 
 <template>
-  <div class="mt-16 md:mt-0">
+  <div class="mt-16 md:mt-0 features-title">
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
       Key Features of ReportR
     </h2>
@@ -50,7 +77,22 @@ const features = [
   </div>
 
   <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-    <div v-for="item in features" :key="item.title" class="flex gap-4 items-start">
+    <div v-for="(item, index) in features" :key="item.title" class="flex gap-4 items-start" v-motion :initial="{
+      opacity: 0,
+      y: 200,
+    }" :enter="{
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 500 + (index + 1) * 100,
+        duration: 600,
+        type: 'keyframes',
+        ease: (x: number) => {
+          return 1 - Math.pow(1 - x, 5);
+        },
+
+      }
+    }">
       <div class="icon bg-black rounded-full p-2 w-8 h-8 shrink-0">
         <Icon class="text-white" :name="item.icon" />
       </div>
@@ -65,35 +107,6 @@ const features = [
 </template>
 
 <style scoped>
-body {
-  background-color: #121212;
-  /* Dark background for the whole page */
-  color: #ffffff;
-  /* Light text for better readability on dark background */
-}
-
-.text-slate-600,
-.text-lg {
-  color: #cccccc;
-  /* Lighter text color for improved visibility on dark backgrounds */
-}
-
-.text-slate-500 {
-  color: #bbbbbb;
-}
-
-@keyframes fadeSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(10%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes pulse {
 
   0%,
@@ -103,16 +116,6 @@ body {
 
   50% {
     transform: scale(1.1);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
 

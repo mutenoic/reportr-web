@@ -46,15 +46,29 @@ const pricing = [
 
 <template>
   <LandingContainer>
-    <LandingSectionhead>
+    <LandingSectionhead v-motion :initial="{
+      opacity: 0,
+      y: 100,
+    }" :visible="{
+      opacity: 1,
+      y: 0,
+
+    }">
       <template v-slot:title>Pricing</template>
-      <template v-slot:desc
-        >Get started with ReportR today.</template
-      >
+      <template v-slot:desc>Get started with ReportR today.</template>
     </LandingSectionhead>
 
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      <LandingPricing v-for="item of pricing" :plan="item" />
+      <LandingPricing v-for="(item, index) of pricing" :plan="item" v-motion :initial="{
+      opacity: 0,
+      y: 100,
+    }" :visible="{
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: item.popular ? 0 : (index + 1) * 100,
+      }
+    }" />
     </div>
   </LandingContainer>
 </template>
