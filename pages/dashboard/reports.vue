@@ -14,6 +14,7 @@ await reportPromise.value;
 <template>
   <div>
     <div v-for="report in reports" :key="report.id">
+      <ReportCard :title="report.title" :description="report.description" :id="report.id" />
       <h1>{{ report.title }}</h1>
       <p>{{ report.description }}</p>
     </div>
