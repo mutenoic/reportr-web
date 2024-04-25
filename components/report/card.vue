@@ -5,6 +5,7 @@ const props = defineProps({
   title: String,
   description: String,
   id: String,
+  report: Object,
 
 })
 
@@ -17,8 +18,9 @@ const images = ref<string[]>([]);
 for (var image in allImagesInFolder.items) {
   const {
     url,
+    promise,
   } = await useStorageFileUrl(imgRef(refStorage, '/' + image))
-
+  await promise.value;
   watch(url, () => {
     images.value.push(url.value ?? "");
   })
@@ -27,9 +29,9 @@ for (var image in allImagesInFolder.items) {
 </script>
 
 <template>
-  <div>
-    <h1>{{ id }}</h1>
+  <div class="border border-primary rounded-lg px-8 py-3 shadow-xl">
     <img :src="image" alt="" v-for="image in images" />
+    <h1>{{ props.report?.title }}</h1>
   </div>
 </template>
 

@@ -2,9 +2,11 @@
 import { collection, orderBy, query, where } from 'firebase/firestore';
 const db = useFirestore();
 
+const id = await useOrganizationId();
+console.log(id.value);
 
 const { data: reports, promise: reportPromise } = useCollection(
-  query(collection(db, 'reports'), orderBy('date', 'desc'), where("organization", "==", "tuXeYWFHXVbwnc0quxRzC78ufSH2"))
+  query(collection(db, 'reports'), orderBy('date', 'desc'), where("organization", "==", id.value))
 );
 
 await reportPromise.value;
@@ -12,12 +14,9 @@ await reportPromise.value;
 </script>
 
 <template>
-  <div>
-    <div v-for="report in reports" :key="report.id">
-      <ReportCard :title="report.title" :description="report.description" :id="report.id" />
-      <h1>{{ report.title }}</h1>
-      <p>{{ report.description }}</p>
-    </div>
+  <div class="flex gap-2 ">
+    <ReportCard v-for="report in reports" :key="report.id" :title="report.title" :description="report.description"
+      :id="report.id" :report="report" />
   </div>
 </template>
 

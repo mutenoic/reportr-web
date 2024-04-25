@@ -2,7 +2,8 @@ export const useOrganizationId = async () => {
   const {
     data: profile,
     promise: profilePromise,
-  } = useProfileDoc()
+    error
+  } = await useProfileDoc()
 
   await profilePromise.value;
 
