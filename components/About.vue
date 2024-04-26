@@ -5,12 +5,12 @@ const TeamImg2 = "https://cdn.discordapp.com/attachments/1103536796119347300/122
 const team = [
   {
     name: 'Valerkata',
-    title: 'Senior Dev',
+    title: 'Web Frontend Dev',
     image: TeamImg1,
   },
   {
     name: 'Kalata',
-    title: 'ratio+ carti better+ carti solos+ carti > your existence +dont care + didnt ask + cry about it + stay mad + get real + L + mald seethe cope harder + hoes mad + basic + ratio + you fell off + the audacity + triggered + any askers + redpilled + get a life + ok and? + cringe + touch grass + not based + your are a (insert stereotype) + not funny didnt laugh + youre* + grammar issue + go outside + get good + reported! + ask deez + ratio again + final ratio + stay mad + stay pressed + cancelled + done for + mad free + freer than air + rip bozo + cringe + lol + irrelevant + cope + jealous + go ahead whine about it + your problem + dont care even more + eat glass',
+    title: 'Mobile Frontend Dev',
     image: TeamImg2,
   },
 ];
@@ -20,10 +20,7 @@ const team = [
 <template>
   <LandingContainer>
     <div class="text-center mt-10" v-motion :initial="{ opacity: 0, y: 100 }" :visible="{ opacity: 1, y: 0 }">
-      <h2 class="font-semibold text-4xl text-gray-900">Meet Our Team</h2>
-      <p class="mt-3 text-lg text-gray-500">
-        naj-mazniq otbor kat cqlo
-      </p>
+      <h2 class="font-bold text-4xl text-gray-900">Meet Our Team</h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mx-auto max-w-5xl mt-12 p-5">
