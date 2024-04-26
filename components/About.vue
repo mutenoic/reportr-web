@@ -1,17 +1,17 @@
 <script setup>
-const TeamImg1 = "https://cdn.discordapp.com/attachments/1103536796119347300/1228453680458502175/body3.png?ex=662c19a4&is=6619a4a4&hm=2e495cd93b616697067e47760374fa463086fe3b5ba648b547b9d99eb72569ea&";
+const TeamImg1 = "https://media.licdn.com/dms/image/D4D03AQHloQzn0RoIqg/profile-displayphoto-shrink_800_800/0/1702136749907?e=1719446400&v=beta&t=obJ5b7juvpJrmFIOE67cYSdvuCoFpIF5ShUy4Mdufb8";
 const TeamImg2 = "https://cdn.discordapp.com/attachments/1103536796119347300/1228453681171796061/body1.png?ex=662c19a5&is=6619a4a5&hm=37a9220de13fb29ed4e577bae92ea74281201836683db8fc3273b916b271745b&";
 
 const team = [
   {
-    name: 'Valerkata',
-    title: 'Web Frontend Dev',
-    image: TeamImg1,
+    name: 'Valery Kultchizky',
+    title: 'Web Dev & Backend Dev',
+    image: '/valery.png',
   },
   {
-    name: 'Kalata',
-    title: 'Mobile Frontend Dev',
-    image: TeamImg2,
+    name: 'Kaloyan Stoyanov',
+    title: 'Mobile Dev & Backend Dev',
+    image: '/kalata.jpg',
   },
 ];
 
@@ -28,7 +28,7 @@ const team = [
         :initial="{ opacity: 0, x: index % 2 === 1 ? 250 : -250 }"
         :visible="{ opacity: 1, x: 0, delay: (index + 1) * 100 }">
         <img :src="person.image"
-          class="w-full md:max-w-sm h-auto rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+          class="w-full md:max-w-sm h-auto rounded-2xl shadow-xl transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
           :alt="person.name" />
         <h3 class="mt-4 text-xl font-medium text-gray-800">{{ person.name }}</h3>
         <p class="text-md text-gray-600">{{ person.title }}</p>
