@@ -1,5 +1,7 @@
 <script setup>
-defineProps(["plan"]);
+const props = defineProps(["plan"]);
+
+function openLink() { useRouter().push(props.plan.button.href ?? "#") }
 </script>
 
 <template>
@@ -18,14 +20,14 @@ defineProps(["plan"]);
       </div>
       <ul class="grid mt-8 text-left gap-y-4">
         <li v-for="(item, index) of plan.features" class="flex items-start gap-3 text-gray-800">
-          <LandingTick className="w-6 h-6" />
-          <span>{{ item }}</span>
+          <LandingTick className="w-6 h-6 text-green-700" />
+          <span class="flex-1">{{ item }}</span>
         </li>
       </ul>
       <div class="flex mt-8">
-        <LandingLink :href="plan.button.link || '#'" block :styleName="plan.popular ? 'primary' : 'outline'">
+        <Button @click="openLink" block :styleName="plan.popular ? 'primary' : 'outline'">
           {{ plan.button.text || "Get Started" }}
-        </LandingLink>
+        </Button>
       </div>
     </div>
   </div>

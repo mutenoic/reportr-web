@@ -5,7 +5,10 @@ const pricing = [
     price: "Free",
     popular: false,
     features: [
-      "mazna",
+      "Access to basic reporting, chat system, and simple data tracking. Limit to one or two projects.",
+      "Single user account",
+      "Limited data storage capacity",
+      "Access to community forums for support and basic online documentation",
     ],
     button: {
       text: "Get Started",
@@ -22,11 +25,16 @@ const pricing = [
     },
     popular: true,
     features: [
-      "mazna",
+      "Includes all Personal plan features plus additional capabilities like multi-user support, more extensive project handling, and advanced reporting tools",
+      "Up to 10 users, with the ability to add more at additional cost",
+      "Increased storage capacity for data and multimedia files",
+      "Email and chat support, plus access to a detailed knowledge base",
+      "Enhanced security features such as two-factor authentication",
+
     ],
     button: {
       text: "Get Started",
-      link: "#",
+      link: "/",
     },
   },
   {
@@ -34,7 +42,14 @@ const pricing = [
     price: "Custom",
     popular: false,
     features: [
-      "mazna",
+      "All features from Startup plan, plus custom modules for specific organizational needs (like IoT integration, advanced analytics)",
+      "Unlimited user accounts",
+      "High-capacity or unlimited storage options",
+      "24/7 priority support, dedicated account manager, and onboarding assistance",
+      "Advanced security compliance features, suitable for highly regulated industries",
+      "Full API access for custom integrations and compatibility with enterprise systems (e.g., ERP, CRM)",
+      "Ability to customize the interface and features to suit organizational needs",
+
     ],
     button: {
       text: "Contact us",
