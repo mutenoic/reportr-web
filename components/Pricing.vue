@@ -64,7 +64,7 @@ const pricing = [
     <LandingSectionhead v-motion :initial="{
       opacity: 0,
       y: 100,
-    }" :visible="{
+    }" :visible-once="{
       opacity: 1,
       y: 0,
 
@@ -77,7 +77,7 @@ const pricing = [
       <LandingPricing v-for="(item, index) of pricing" :plan="item" v-motion :initial="{
       opacity: 0,
       y: 100,
-    }" :visible="{
+    }" :visible-once="{
       opacity: 1,
       y: 0,
       transition: {

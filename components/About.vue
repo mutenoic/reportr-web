@@ -19,14 +19,14 @@ const team = [
 
 <template>
   <LandingContainer>
-    <div class="text-center mt-10" v-motion :initial="{ opacity: 0, y: 100 }" :visible="{ opacity: 1, y: 0 }">
+    <div class="text-center mt-10" v-motion :initial="{ opacity: 0, y: 100 }" :visible-once="{ opacity: 1, y: 0 }">
       <h2 class="font-bold text-4xl text-gray-900">Meet Our Team</h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mx-auto max-w-5xl mt-12 p-5">
       <div v-for="(person, index) in team" :key="person.name" class="flex flex-col items-center" v-motion
         :initial="{ opacity: 0, x: index % 2 === 1 ? 250 : -250 }"
-        :visible="{ opacity: 1, x: 0, delay: (index + 1) * 100 }">
+        :visible-once="{ opacity: 1, x: 0, delay: (index + 1) * 100 }">
         <img :src="person.image"
           class="w-full md:max-w-sm h-auto rounded-2xl shadow-xl transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
           :alt="person.name" />
