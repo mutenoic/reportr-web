@@ -24,11 +24,11 @@ function openLink() { useRouter().push(props.plan.button.href ?? "#") }
           <span class="flex-1">{{ item }}</span>
         </li>
       </ul>
-      <div class="flex mt-8">
+      <!-- <div class="flex mt-8">
         <Button @click="openLink" block :styleName="plan.popular ? 'primary' : 'outline'">
           {{ plan.button.text || "Get Started" }}
         </Button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
